@@ -47,8 +47,6 @@ export default class LayoutsActions {
     editLayout(layoutName) {
         cy.get('[width="300"]').contains(layoutName).parent().siblings('.last').find('.btn-primary').click()
         cy.get('h3').should('contain', 'Edit Design Layout') // Assertion
-    //     cy.get('[width="300"]').contains(layoutName).parent().siblings('.column-title').find('.btn-danger').should('not.exist') // Assertion
-    //     cy.get('[width="300"]').contains(layoutName).parent().siblings('.column-title').find('.btn-success').should('exist') // Assertion
     }
 
     deleteLayout(layoutName) {
