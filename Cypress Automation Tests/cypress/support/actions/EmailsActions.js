@@ -1,5 +1,3 @@
-
-
 export default class EmailsActions {
 
     goToEmailsMenu() {
@@ -134,7 +132,6 @@ export default class EmailsActions {
     }
 
     makeDefault() {
-        cy.wait(500)
         cy.get('.col-md-2 > .btn-danger').should('contain', 'Make Default') // Assertion
         cy.get('.col-md-2 > .btn-danger').click()
     }
@@ -149,6 +146,5 @@ export default class EmailsActions {
         cy.get('.col-md-2 > .btn').click()
         cy.get('.col-md-2 > .btn').should('contain', 'Make Default') // Assertion
     }
-
 
 }
