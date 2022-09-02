@@ -71,8 +71,6 @@ export default class BundlesActions {
         cy.get('.template-name > .btn').should('exist') // Assertion
         cy.get('.template-list-item > :nth-child(2) > .col-md-6 > input').type(weight)
         cy.get('.template-list-item').find('[id^=label-][id$=-first]').first().clear().type(templateName)
-
-        
     }
 
     newBundleAddAnotherTemplate(templateName, weight) {
@@ -107,6 +105,5 @@ export default class BundlesActions {
         cy.get('.swal2-confirm').click()
         cy.contains('Bundle deleted successfully').should('exist') // Assertion
     }
-
 
 }
