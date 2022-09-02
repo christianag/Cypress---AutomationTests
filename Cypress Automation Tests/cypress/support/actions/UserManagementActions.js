@@ -41,7 +41,6 @@ export default class UserManagementActions {
     }
 
     findUser(email) {
-        cy.wait(500)
         users.searchUserField().type(email)
         users.searchUserButton().click()
         org.searchResultsTable().contains(email).should('exist') // Assertion
