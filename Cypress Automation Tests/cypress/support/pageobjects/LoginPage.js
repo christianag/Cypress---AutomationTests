@@ -13,6 +13,3 @@ export default class LoginPage{
     clickLogout() {return cy.get('.fa-sign-out')}
 
 }
-
-// module.exports = new LoginPage();
-
