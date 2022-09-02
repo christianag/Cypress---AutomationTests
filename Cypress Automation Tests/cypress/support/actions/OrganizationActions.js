@@ -88,7 +88,6 @@ export default class OrganizationActions{
     assignBadge(badgeName) {
         organizationPage.searchBadgeField().type(badgeName)
         organizationPage.searchBadgeButton().click()
-        cy.wait(1000)
         organizationPage.assignBadgeButton().click()
         cy.contains('Badge assigned successfully').should('exist') // Assertion
         cy.reload()
@@ -127,7 +126,6 @@ export default class OrganizationActions{
         organizationPage.deleteButton().click()
         organizationPage.popupWarning().should('exist') // Assertion
         cy.contains('Are you sure to delete this organization?').should('exist') // Assertion
-        cy.wait(500)
         organizationPage.popupConfirmButton().click()
     }
 
@@ -152,7 +150,6 @@ export default class OrganizationActions{
     findAccount(email) {
         organizationPage.searchUserField().type(email)
         organizationPage.searchUserButton().click()
-        cy.wait(500)
         organizationPage.searchResultsTable().contains(email).should('exist') // Assertion
     }
 
