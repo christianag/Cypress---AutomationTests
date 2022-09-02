@@ -175,7 +175,4 @@ describe('Test the Template Designs Menu', () => {
         designs.deleteDesign()
     })
 
-
-
-
 })
