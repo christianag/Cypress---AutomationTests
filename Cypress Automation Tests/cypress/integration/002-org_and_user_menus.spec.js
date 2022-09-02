@@ -112,7 +112,7 @@ describe('Create new User and Org', () => {
     it('Issue Diploma to User', () => {
         diplomas.goToIssueDiplomas()
         diplomas.clickNext()
-        diplomas.selectOrganization('Lab08')
+        diplomas.selectOrganization(NEW_ORG)
         diplomas.selectTemplate('Test Template')
         diplomas.selectLanguage('Dansk')
         diplomas.selectManualInput()
@@ -127,7 +127,7 @@ describe('Create new User and Org', () => {
         diplomas.goToIssueDiplomas()
         diplomas.selectBundle()
         diplomas.clickNext()
-        diplomas.selectOrganization('Lab08')
+        diplomas.selectOrganization(NEW_ORG)
         diplomas.selectTemplate('ChrisTest001')
         diplomas.selectManualInput()
         diplomas.inputReceiverName('ChrisTest Cypress Issued Bundle')
@@ -146,7 +146,7 @@ describe('Create new User and Org', () => {
 
     it('Revoke User Diploma', () => {
         diplomas.goToSearchDiplomas()
-        diplomas.searchOrgName('Lab08')
+        diplomas.searchOrgName(NEW_ORG)
         diplomas.searchRecepient(USER_EMAIL)
         diplomas.clickSearch()
         diplomas.revokeDiploma('ChrisTest Cypress Issued Diploma')
@@ -169,7 +169,7 @@ describe('Create new User and Org', () => {
 
     it('Revoke User Bundle', () => {
         diplomas.goToSearchDiplomas()
-        diplomas.searchOrgName('Lab08')
+        diplomas.searchOrgName(NEW_ORG)
         diplomas.searchRecepient(USER_EMAIL)
         diplomas.clickSearch()
         diplomas.revokeDiploma('ChrisTest Cypress Issued Bundle')
