@@ -1,0 +1,12 @@
+{
+ 
+    "env":{
+        "URL": "PAGE URL",
+        "EMAIL": "EMAIL ADDRESS",
+        "PASSWORD": "PASSWORD",
+        "RECEPIENT_EMAIL": "ENTER EMAIL OF YOUR CHOICE HERE"
+    },
+
+    "viewportHeight": 1080,
+    "viewportWidth": 1920
+}

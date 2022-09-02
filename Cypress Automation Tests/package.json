@@ -1,0 +1,20 @@
+{
+  "name": "firstcypresstests",
+  "version": "1.0.0",
+  "description": "First Cypress framework project",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "cypress",
+    "test"
+  ],
+  "author": "chris",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^9.5.2",
+    "cypress-file-upload": "^5.0.8",
+    "cypress-wait-until": "^1.7.2"
+  }
+}
