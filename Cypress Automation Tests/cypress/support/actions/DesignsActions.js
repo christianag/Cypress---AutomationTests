@@ -45,14 +45,13 @@ export default class DesignsActions {
     createNewDesign() {
         designsPage.createDesignButton().click()
         cy.contains('Create Design').should('exist') // Assertion
-        cy.wait(1000)
     }
 
     enterNewDesignDetails(name, orgName, language) {
         designsPage.newDesignName().type(name)
         designsPage.newDesignOrgDropdown().click()
         designsPage.newDesignOrgInput().type(orgName + '{enter}')
-        cy.wait(1000)
+        cy.wait(500)
         designsPage.newDesignLanguage().click()
         designsPage.newDesignLanguageInput().type(language + '{enter}')
     }
@@ -101,7 +100,6 @@ export default class DesignsActions {
     searchDesignName(designName) {
         designsPage.searchDesignNameField().type(designName)
         designsPage.searchButton().click()
-        cy.wait(1000)
     }
 
     changeDesignVisibility() {
@@ -135,7 +133,6 @@ export default class DesignsActions {
         designsPage.duplicatePopUp().find('.multiselect').click()
         designsPage.duplicatePopUp().find('.multiselect__content-wrapper > ul > li').contains(language).click()
         designsPage.duplicatePopUp().find('.btn-success').click()
-        // cy.contains('Design duplicated successfully').should('exist') //Assertion
         cy.get('.swal2-popup', {timeout: 5000}).should('contain', 'Design duplicated successfully') // Assertion
     }
 
@@ -198,7 +195,5 @@ export default class DesignsActions {
     clickOnPage() {
         cy.get('#page__content').click()
     }
-
-
 
 }
